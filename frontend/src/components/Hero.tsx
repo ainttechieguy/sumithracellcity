@@ -88,32 +88,37 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <motion.button
+            <motion.a
+              href="/#contact"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="px-8 py-4 bg-primary text-white rounded-full font-medium flex items-center gap-2 hover:bg-blue-700 transition-colors shadow-[0_0_40px_rgba(11,87,208,0.3)]"
             >
               Book Service
               <ArrowRight className="w-5 h-5" />
-            </motion.button>
+            </motion.a>
 
-            <motion.button
+            <motion.a
+              href="tel:+919962333311"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="px-8 py-4 glass rounded-full font-medium flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors"
             >
               <Phone className="w-5 h-5" />
               Call Now
-            </motion.button>
+            </motion.a>
 
-            <motion.button
+            <motion.a
+              href="https://wa.me/919962333311"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="px-8 py-4 rounded-full font-medium flex items-center gap-2 text-green-600 dark:text-accent hover:bg-green-50 dark:hover:bg-accent/10 transition-colors border border-green-200 dark:border-accent/20"
             >
               <MessageCircle className="w-5 h-5" />
               WhatsApp
-            </motion.button>
+            </motion.a>
           </div>
 
           <div className="mt-12 grid grid-cols-3 gap-6 pt-8 border-t border-gray-200 dark:border-white/10">
@@ -156,7 +161,7 @@ export default function Hero() {
               <div className="w-full h-full bg-black rounded-[2.2rem] overflow-hidden relative border border-white/10" style={{ transform: 'translateZ(10px)' }}>
                 {/* Dynamic Island */}
                 <div className="absolute top-3 left-1/2 -translate-x-1/2 w-24 h-7 bg-black rounded-full z-30 shadow-[0_5px_15px_rgba(0,0,0,0.5)]"></div>
-                
+
                 {/* Screen Content - Video */}
                 <video
                   autoPlay

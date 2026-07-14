@@ -98,9 +98,8 @@ export default function Contact() {
           viewport={{ once: true }}
           className="h-[500px] lg:h-auto relative rounded-3xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-xl group"
         >
-          {/* We use a placeholder map since we don't have an API key, or a stylized iframe */}
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.751214065416!2d80.2241!3d11.8973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525b7a151b1f6d%3A0x6b9d6a782e4f0c0!2sSholinganallur%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin" 
+            src="https://maps.google.com/maps?q=24,+Rajiv+Gandhi+Salai,+Near+Karur+Vysya+Bank,+Sholinganallur,+Chennai,+Tamil+Nadu+-+600119&t=&z=16&ie=UTF8&iwloc=&output=embed" 
             width="100%" 
             height="100%" 
             style={{ border: 0, filter: 'grayscale(0.2) contrast(1.2)' }} 
@@ -112,7 +111,7 @@ export default function Contact() {
           
           <div className="absolute bottom-6 left-6 right-6 flex justify-center pointer-events-none">
             <a 
-              href="https://maps.google.com/?q=Sumithra+Cell+City+Sholinganallur+Chennai"
+              href="https://maps.google.com/?q=24,+Rajiv+Gandhi+Salai,+Near+Karur+Vysya+Bank,+Sholinganallur,+Chennai,+Tamil+Nadu+-+600119"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white dark:bg-black text-secondary dark:text-white px-8 py-4 rounded-full font-bold shadow-2xl flex items-center gap-2 pointer-events-auto hover:scale-105 transition-transform"
