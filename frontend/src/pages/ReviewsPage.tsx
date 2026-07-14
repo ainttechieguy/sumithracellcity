@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO';
 import Navbar from '../components/Navbar';
 import Footer from '../components/sections/Footer';
 import Reviews from '../components/sections/Reviews';
@@ -12,10 +12,11 @@ export default function ReviewsPage() {
 
   return (
     <main className="bg-white dark:bg-[#0a0a0a] text-secondary dark:text-white min-h-screen">
-      <Helmet>
-        <title>Customer Reviews & Transformations | Sumithra Cell City</title>
-        <meta name="description" content="Read real customer reviews and see our before & after mobile repair transformations at Sumithra Cell City." />
-      </Helmet>
+      <SEO 
+        title="Customer Reviews & Transformations | Sumithra Cell City"
+        description="Read real customer reviews and see our before & after mobile repair transformations at Sumithra Cell City in Chennai."
+        path="/reviews"
+      />
       <Navbar />
       <div className="pt-20">
         <Reviews />

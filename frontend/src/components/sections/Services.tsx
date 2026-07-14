@@ -50,14 +50,15 @@ export default function Services() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
         {services.map((service, index) => (
-          <motion.div
+          <motion.a
+            href="/#booking"
             key={index}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.05 }}
             whileHover={{ y: -5 }}
-            className="group relative bg-white dark:bg-[#111] border border-gray-200 dark:border-white/10 rounded-2xl p-6 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 overflow-hidden cursor-pointer"
+            className="group relative block bg-white dark:bg-[#111] border border-gray-200 dark:border-white/10 rounded-2xl p-6 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300 overflow-hidden cursor-pointer"
           >
             {/* Edge Glow Effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-transparent to-primary/0 group-hover:from-primary/5 group-hover:to-cyan-500/10 transition-all duration-500"></div>
@@ -81,12 +82,12 @@ export default function Services() {
                 </span>
                 
                 <span className="inline-flex items-center gap-1 text-sm font-semibold text-primary dark:text-cyan-400 group-hover:translate-x-1 transition-transform">
-                  View Service
+                  Book Now
                   <ArrowRight className="w-4 h-4" />
                 </span>
               </div>
             </div>
-          </motion.div>
+          </motion.a>
         ))}
       </div>
     </section>

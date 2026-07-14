@@ -3,7 +3,7 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { motion } from 'motion/react';
-import { Calendar, Clock, MapPin, Smartphone, Wrench, FileText, Send, CheckCircle2 } from 'lucide-react';
+import { Calendar, Clock, MapPin, Smartphone, Wrench, FileText, Send, CheckCircle2, ChevronDown } from 'lucide-react';
 
 const bookingSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -40,13 +40,19 @@ export default function Booking() {
   const watchPickup = watch("pickup");
 
   const onSubmit: SubmitHandler<BookingFormValues> = async (data) => {
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    console.log("Booking data:", data);
-    
-    // Fallback local storage for dev
-    const existing = JSON.parse(localStorage.getItem('bookings') || '[]');
-    localStorage.setItem('bookings', JSON.stringify([...existing, { ...data, id: 'JOB-' + Math.floor(Math.random() * 10000) }]));
+    const message = `*New Service Request*
+
+*Name:* ${data.name}
+*Mobile:* ${data.mobile}
+*Email:* ${data.email || 'N/A'}
+*Device:* ${data.brand} ${data.model}
+*Service:* ${data.service}
+*Description:* ${data.description || 'N/A'}
+*Date & Time:* ${data.date} at ${data.time}
+*Pickup Required:* ${data.pickup ? 'Yes' : 'No'}${data.pickup ? `\n*Address:* ${data.address}` : ''}`;
+
+    const whatsappUrl = `https://wa.me/919962333311?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
     
     setIsSubmitted(true);
   };
@@ -118,7 +124,25 @@ export default function Booking() {
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium mb-2">Brand *</label>
-                    <input {...register("brand")} placeholder="e.g. Apple" className="w-full bg-gray-50 dark:bg-black/50 border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" />
+                    <div className="relative">
+                      <select {...register("brand")} className="w-full appearance-none bg-gray-50 dark:bg-black/50 border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 pr-10 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-secondary dark:text-white">
+                        <option value="">Select brand...</option>
+                        <option value="Apple">Apple</option>
+                        <option value="Samsung">Samsung</option>
+                        <option value="OnePlus">OnePlus</option>
+                        <option value="Xiaomi">Xiaomi / Redmi</option>
+                        <option value="Vivo">Vivo</option>
+                        <option value="Oppo">Oppo</option>
+                        <option value="Realme">Realme</option>
+                        <option value="Google Pixel">Google Pixel</option>
+                        <option value="Motorola">Motorola</option>
+                        <option value="Asus">Asus</option>
+                        <option value="Nokia">Nokia</option>
+                        <option value="Nothing">Nothing</option>
+                        <option value="Other">Other</option>
+                      </select>
+                      <ChevronDown className="w-5 h-5 text-gray-400 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
+                    </div>
                     {errors.brand && <span className="text-xs text-red-500 mt-1">{errors.brand.message}</span>}
                   </div>
                   <div>
@@ -130,14 +154,17 @@ export default function Booking() {
                 
                 <div>
                   <label className="block text-sm font-medium mb-2">Service Required *</label>
-                  <select {...register("service")} className="w-full bg-gray-50 dark:bg-black/50 border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-secondary dark:text-white">
-                    <option value="">Select a service...</option>
-                    <option value="screen">Screen Replacement</option>
-                    <option value="battery">Battery Replacement</option>
-                    <option value="motherboard">Motherboard Repair</option>
-                    <option value="water">Water Damage</option>
-                    <option value="other">Other Issue</option>
-                  </select>
+                  <div className="relative">
+                    <select {...register("service")} className="w-full appearance-none bg-gray-50 dark:bg-black/50 border border-gray-200 dark:border-white/10 rounded-xl px-4 py-3 pr-10 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all text-secondary dark:text-white">
+                      <option value="">Select a service...</option>
+                      <option value="screen">Screen Replacement</option>
+                      <option value="battery">Battery Replacement</option>
+                      <option value="motherboard">Motherboard Repair</option>
+                      <option value="water">Water Damage</option>
+                      <option value="other">Other Issue</option>
+                    </select>
+                    <ChevronDown className="w-5 h-5 text-gray-400 absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
+                  </div>
                   {errors.service && <span className="text-xs text-red-500 mt-1">{errors.service.message}</span>}
                 </div>
 

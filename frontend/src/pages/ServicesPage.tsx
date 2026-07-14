@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO';
 import Navbar from '../components/Navbar';
 import Footer from '../components/sections/Footer';
 import Services from '../components/sections/Services';
@@ -13,10 +13,11 @@ export default function ServicesPage() {
 
   return (
     <main className="bg-white dark:bg-[#0a0a0a] text-secondary dark:text-white min-h-screen">
-      <Helmet>
-        <title>Services & Repairs | Sumithra Cell City</title>
-        <meta name="description" content="Expert mobile phone repair, screen replacement, battery service, and Apple product servicing at Sumithra Cell City in Chennai." />
-      </Helmet>
+      <SEO 
+        title="Mobile Repair Services | Sumithra Cell City"
+        description="Expert mobile phone repair, screen replacement, battery service, and Apple product servicing at Sumithra Cell City in Chennai."
+        path="/services"
+      />
       <Navbar />
       <div className="pt-20">
         <Services />

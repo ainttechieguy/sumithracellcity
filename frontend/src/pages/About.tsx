@@ -6,6 +6,7 @@ import FloatingActions from '../components/sections/FloatingActions';
 import { motion } from 'motion/react';
 import { Award, Shield, ThumbsUp, Users, CheckCircle2 } from 'lucide-react';
 import { businessData } from '../data/business';
+import SEO from '../components/SEO';
 
 const values = [
   { icon: <Shield />, title: "Honest Diagnosis", desc: "No hidden fees, no unnecessary repairs." },
@@ -36,6 +37,11 @@ export default function About() {
 
   return (
     <main className="bg-white dark:bg-[#0a0a0a] text-secondary dark:text-white min-h-screen selection:bg-primary/30 selection:text-primary pt-24">
+      <SEO 
+        title="About Sumithra Cell City | Trusted Mobile Repair in Chennai"
+        description="Learn about Sumithra Cell City, serving Chennai's IT corridor since 2005. Expert phone repair and Apple service specialists."
+        path="/about"
+      />
       <Navbar />
 
       <section className="py-20 px-6 max-w-7xl mx-auto">

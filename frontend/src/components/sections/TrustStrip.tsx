@@ -7,7 +7,7 @@ export default function TrustStrip() {
   const items = [
     {
       icon: <Calendar className="w-5 h-5" />,
-      label: "Founded",
+      label: "Established",
       value: "2005",
       description: "Over 18 years serving Chennai"
     },
@@ -15,7 +15,7 @@ export default function TrustStrip() {
       icon: <User className="w-5 h-5" />,
       label: "Owner",
       value: businessData.owner,
-      description: "Expert technician & founder"
+      description: "Expert Technician"
     },
     {
       icon: <MapPin className="w-5 h-5" />,
@@ -39,7 +39,7 @@ export default function TrustStrip() {
 
   return (
     <section className="relative z-20 -mt-10 mb-20 px-6 max-w-7xl mx-auto">
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
@@ -48,7 +48,7 @@ export default function TrustStrip() {
       >
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6 divide-x divide-gray-200 dark:divide-white/10">
           {items.map((item, index) => (
-            <div 
+            <div
               key={index}
               className={`p-4 flex flex-col gap-2 ${index % 2 === 0 ? '' : 'border-l-0 lg:border-l'} ${index > 0 ? 'pl-6' : ''}`}
             >

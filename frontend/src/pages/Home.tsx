@@ -8,7 +8,7 @@ import Faq from '../components/sections/Faq';
 import Contact from '../components/sections/Contact';
 import Footer from '../components/sections/Footer';
 import FloatingActions from '../components/sections/FloatingActions';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO';
 
 export default function Home() {
   useEffect(() => {
@@ -31,11 +31,11 @@ export default function Home() {
 
   return (
     <main className="bg-white dark:bg-[#0a0a0a] text-secondary dark:text-white min-h-screen selection:bg-primary/30 selection:text-primary">
-      <Helmet>
-        <title>Sumithra Cell City | Mobile Phone Repair & Apple Product Service in Sholinganallur</title>
-        <meta name="description" content="Professional smartphone repair and Apple product servicing in Sholinganallur, Chennai. Sumithra Cell City has served customers since 2005." />
-        <meta name="keywords" content="Mobile repair in Sholinganallur, iPhone service in Sholinganallur, Apple product repair Chennai, Smartphone service near OMR, Mobile phone repair Rajiv Gandhi Salai" />
-      </Helmet>
+      <SEO 
+        title="Sumithra Cell City | Mobile Repair & Apple Service in Sholinganallur"
+        description="Professional smartphone repair and Apple product servicing in Sholinganallur, Chennai. Sumithra Cell City has served customers since 2005."
+        path="/"
+      />
       <Navbar />
       <Hero />
       <WhyChooseUs />

@@ -32,12 +32,12 @@ export default function Navbar() {
       <div className="container mx-auto px-6 flex items-center justify-between">
         
         {/* Logo */}
-        <Link to="/" className="flex items-center group ml-6 md:ml-10">
+        <Link to="/" className="flex items-center group ml-10 md:ml-16">
           <img 
             src="/logo.png" 
             alt="Sumithra Cell City" 
             className={`w-auto object-contain transition-all duration-300 group-hover:scale-105 ${
-              isScrolled ? 'h-16 md:h-24' : 'h-16 md:h-28'
+              isScrolled ? 'h-20 md:h-28' : 'h-20 md:h-32'
             }`} 
           />
         </Link>
@@ -69,9 +69,9 @@ export default function Navbar() {
               +91-99623 33311
             </span>
           </a>
-          <Link to="/#contact" className="px-6 py-2.5 bg-secondary dark:bg-white text-white dark:text-black rounded-full text-sm font-medium hover:scale-105 transition-transform inline-block shadow-lg shadow-secondary/20 dark:shadow-white/10">
+          <a href="/#contact" className="px-6 py-2.5 bg-secondary dark:bg-white text-white dark:text-black rounded-full text-sm font-medium hover:scale-105 transition-transform inline-block shadow-lg shadow-secondary/20 dark:shadow-white/10">
             Contact Us
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -90,9 +90,9 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass border-t border-gray-200/50 dark:border-white/10 absolute w-full top-full left-0 overflow-hidden"
+            className="md:hidden bg-white/95 dark:bg-[#0a0a0a]/95 backdrop-blur-3xl border-t border-gray-200/50 dark:border-white/10 absolute w-full top-full left-0 shadow-2xl z-50"
           >
-            <nav className="flex flex-col gap-4 mt-8">
+            <nav className="flex flex-col gap-4 mt-6 px-6 pb-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
@@ -115,13 +115,13 @@ export default function Navbar() {
                   </div>
                   +91-99623 33311
                 </a>
-                <Link 
-                  to="/#contact" 
+                <a 
+                  href="/#contact" 
                   className="px-6 py-3 bg-primary text-white rounded-full text-center font-bold shadow-lg hover:scale-[1.02] transition-transform"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Contact Us
-                </Link>
+                </a>
               </div>
             </nav>
           </motion.div>

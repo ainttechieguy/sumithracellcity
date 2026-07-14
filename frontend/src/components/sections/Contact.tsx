@@ -99,7 +99,7 @@ export default function Contact() {
           className="h-[500px] lg:h-auto relative rounded-3xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-xl group"
         >
           <iframe 
-            src="https://maps.google.com/maps?q=24,+Rajiv+Gandhi+Salai,+Near+Karur+Vysya+Bank,+Sholinganallur,+Chennai,+Tamil+Nadu+-+600119&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+            src="https://maps.google.com/maps?q=Sumithra+Cell+City,+24,+Rajiv+Gandhi+Salai,+Near+Karur+Vysya+Bank,+Sholinganallur,+Chennai,+Tamil+Nadu+-+600119&t=&z=16&ie=UTF8&iwloc=&output=embed" 
             width="100%" 
             height="100%" 
             style={{ border: 0, filter: 'grayscale(0.2) contrast(1.2)' }} 
@@ -111,7 +111,7 @@ export default function Contact() {
           
           <div className="absolute bottom-6 left-6 right-6 flex justify-center pointer-events-none">
             <a 
-              href="https://maps.google.com/?q=24,+Rajiv+Gandhi+Salai,+Near+Karur+Vysya+Bank,+Sholinganallur,+Chennai,+Tamil+Nadu+-+600119"
+              href="https://maps.google.com/?q=Sumithra+Cell+City,+24,+Rajiv+Gandhi+Salai,+Near+Karur+Vysya+Bank,+Sholinganallur,+Chennai,+Tamil+Nadu+-+600119"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white dark:bg-black text-secondary dark:text-white px-8 py-4 rounded-full font-bold shadow-2xl flex items-center gap-2 pointer-events-auto hover:scale-105 transition-transform"

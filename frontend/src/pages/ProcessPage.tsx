@@ -1,25 +1,27 @@
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react';
+import { motion } from 'motion/react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/sections/Footer';
 import Process from '../components/sections/Process';
-import Tracker from '../components/sections/Tracker';
+import Booking from '../components/sections/Booking';
+import Faq, { faqs } from '../components/sections/Faq';
+import SEO from '../components/SEO';
+import { ArrowRight, FileText, CheckCircle2 } from 'lucide-react';
 
 export default function ProcessPage() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <main className="bg-white dark:bg-[#0a0a0a] text-secondary dark:text-white min-h-screen">
-      <Helmet>
-        <title>Our Repair Process | Sumithra Cell City</title>
-        <meta name="description" content="Learn about our transparent, 7-step mobile repair process. From diagnostic to delivery, we ensure the highest quality of service." />
-      </Helmet>
+      <SEO 
+        title="Repair Process & FAQs | Sumithra Cell City"
+        description="Understand our transparent smartphone repair process and find answers to frequently asked questions about our services."
+        path="/process"
+        faqData={faqs}
+      />
       <Navbar />
       <div className="pt-20">
         <Process />
-        <Tracker />
+        <Booking />
+        <Faq />
       </div>
       <Footer />
     </main>

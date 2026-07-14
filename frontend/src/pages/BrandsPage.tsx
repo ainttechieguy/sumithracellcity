@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO';
 import Navbar from '../components/Navbar';
 import Footer from '../components/sections/Footer';
 import Brands from '../components/sections/Brands';
@@ -12,10 +12,11 @@ export default function BrandsPage() {
 
   return (
     <main className="bg-white dark:bg-[#0a0a0a] text-secondary dark:text-white min-h-screen">
-      <Helmet>
-        <title>Supported Brands | Sumithra Cell City</title>
-        <meta name="description" content="We repair all major smartphone brands including Apple, Samsung, OnePlus, Xiaomi, Vivo, Oppo, and more at our Sholinganallur service center." />
-      </Helmet>
+      <SEO 
+        title="Supported Brands | Mobile Repair Chennai | Sumithra Cell City"
+        description="We repair all major smartphone brands including Apple, Samsung, OnePlus, Xiaomi, Vivo, Oppo, and more at our Sholinganallur service center."
+        path="/brands"
+      />
       <Navbar />
       
       {/* Brands Hero Section */}

@@ -89,7 +89,7 @@ export default function Hero() {
 
           <div className="flex flex-wrap gap-4">
             <motion.a
-              href="/#contact"
+              href="#booking"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="px-8 py-4 bg-primary text-white rounded-full font-medium flex items-center gap-2 hover:bg-blue-700 transition-colors shadow-[0_0_40px_rgba(11,87,208,0.3)]"

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
 
-const faqs = [
+export const faqs = [
   { q: "How long does a mobile repair usually take?", a: "Most standard repairs like screen or battery replacements are completed within 30 to 60 minutes. Complex motherboard repairs may take 1-3 days." },
   { q: "Do you service all smartphone brands?", a: "Yes, we service all major brands including Apple, Samsung, OnePlus, Google Pixel, Vivo, Oppo, and Xiaomi." },
   { q: "Are you specialised in Apple product repairs?", a: "Yes, we have over 18 years of experience and specialize in repairing Apple products including iPhones, iPads, MacBooks, and Apple Watches." },
