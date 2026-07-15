@@ -12,7 +12,7 @@ export const businessData = {
       state: "Chennai, Tamil Nadu",
       pincode: "600119"
     },
-    phone: "099623 33311",
+    phone: "+91-9962333311",
     whatsapp: "919962333311", // Formatted for links
     email: "sumithracellcity@gmail.com"
   },
@@ -21,7 +21,12 @@ export const businessData = {
     reviews: 75
   },
   hours: [
-    { day: "Monday - Saturday", time: "10:00 AM - 9:30 PM" },
+    { day: "Monday", time: "09:00 AM - 09:00 PM" },
+    { day: "Tuesday", time: "09:00 AM - 09:00 PM" },
+    { day: "Wednesday", time: "09:00 AM - 09:00 PM" },
+    { day: "Thursday", time: "09:00 AM - 09:00 PM" },
+    { day: "Friday", time: "09:00 AM - 09:00 PM" },
+    { day: "Saturday", time: "09:00 AM - 09:00 PM" },
     { day: "Sunday", time: "Closed" }
   ],
   navLinks: [

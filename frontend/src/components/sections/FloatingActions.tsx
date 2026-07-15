@@ -74,7 +74,7 @@ export default function FloatingActions() {
 
         {/* WhatsApp Floating Button */}
         <motion.a
-          href={`https://wa.me/${businessData.contact.whatsapp}`}
+          href={`https://wa.me/${businessData.contact.whatsapp}?text=Hi%20Sumithra%20Cell%20City,%20I%20would%20like%20to%20enquire%20about%20a%20mobile%20repair%20service.`}
           target="_blank"
           rel="noopener noreferrer"
           initial={{ scale: 0 }}

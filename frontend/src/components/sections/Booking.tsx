@@ -217,12 +217,14 @@ export default function Booking() {
                 <Send className="w-4 h-4" />
               </button>
               
-              <button 
-                type="button"
+              <a 
+                href="https://wa.me/919962333311?text=Hi%20Sumithra%20Cell%20City,%20I%20would%20like%20to%20enquire%20about%20a%20mobile%20repair%20service."
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex-1 bg-[#25D366] text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-[#20bd5a] transition-colors"
               >
                 Continue on WhatsApp
-              </button>
+              </a>
             </div>
           </form>
         )}

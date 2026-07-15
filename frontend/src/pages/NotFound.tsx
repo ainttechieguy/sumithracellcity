@@ -67,7 +67,7 @@ export default function NotFound() {
             </a>
             
             <a 
-              href="https://wa.me/919962333311"
+              href="https://wa.me/919962333311?text=Hi%20Sumithra%20Cell%20City,%20I%20would%20like%20to%20enquire%20about%20a%20mobile%20repair%20service."
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 px-8 py-4 bg-[#25D366]/10 text-[#25D366] border border-[#25D366]/20 rounded-full font-bold hover:bg-[#25D366]/20 transition-colors w-full sm:w-auto justify-center"

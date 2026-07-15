@@ -61,13 +61,16 @@ export default function Contact() {
                 <div className="w-12 h-12 rounded-full bg-blue-50 dark:bg-primary/10 flex items-center justify-center text-primary dark:text-cyan-400 flex-shrink-0">
                   <Clock className="w-6 h-6" />
                 </div>
-                <div>
-                  <h4 className="font-bold text-secondary dark:text-white mb-1">Business Hours</h4>
-                  {businessData.hours.map((h, i) => (
-                    <p key={i} className="text-gray-600 dark:text-gray-400 flex justify-between w-48">
-                      <span>{h.day}:</span> <span className="font-medium">{h.time}</span>
-                    </p>
-                  ))}
+                <div className="flex-1 w-full max-w-xs">
+                  <h4 className="font-bold text-secondary dark:text-white mb-2">Business Hours</h4>
+                  <div className="flex flex-col space-y-1">
+                    {businessData.hours.map((h, i) => (
+                      <div key={i} className="text-gray-600 dark:text-gray-400 flex justify-between items-center text-sm sm:text-base">
+                        <span className="shrink-0 w-24">{h.day}:</span> 
+                        <span className="font-medium text-right flex-1">{h.time}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -80,7 +83,7 @@ export default function Contact() {
                 <Phone className="w-4 h-4" /> Click to Call
               </a>
               <a 
-                href={`https://wa.me/${businessData.contact.whatsapp}`}
+                href={`https://wa.me/${businessData.contact.whatsapp}?text=Hi%20Sumithra%20Cell%20City,%20I%20would%20like%20to%20enquire%20about%20a%20mobile%20repair%20service.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 py-4 rounded-xl bg-[#25D366] text-white font-bold flex items-center justify-center gap-2 hover:bg-[#20bd5a] transition-colors"
@@ -99,7 +102,7 @@ export default function Contact() {
           className="h-[500px] lg:h-auto relative rounded-3xl overflow-hidden border border-gray-200 dark:border-white/10 shadow-xl group"
         >
           <iframe 
-            src="https://maps.google.com/maps?q=Sumithra+Cell+City,+24,+Rajiv+Gandhi+Salai,+Near+Karur+Vysya+Bank,+Sholinganallur,+Chennai,+Tamil+Nadu+-+600119&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+            src="https://maps.google.com/maps?q=Sumithra%20Cell%20City%2C%2024%2C%20Rajiv%20Gandhi%20Salai%2C%20Near%20Karur%20Vysya%20Bank%2C%20Sholinganallur%2C%20Chennai%2C%20Tamil%20Nadu%20-%20600119&t=&z=16&ie=UTF8&iwloc=&output=embed" 
             width="100%" 
             height="100%" 
             style={{ border: 0, filter: 'grayscale(0.2) contrast(1.2)' }} 
@@ -111,7 +114,7 @@ export default function Contact() {
           
           <div className="absolute bottom-6 left-6 right-6 flex justify-center pointer-events-none">
             <a 
-              href="https://maps.google.com/?q=Sumithra+Cell+City,+24,+Rajiv+Gandhi+Salai,+Near+Karur+Vysya+Bank,+Sholinganallur,+Chennai,+Tamil+Nadu+-+600119"
+              href="https://maps.google.com/?q=Sumithra%20Cell%20City%2C%2024%2C%20Rajiv%20Gandhi%20Salai%2C%20Near%20Karur%20Vysya%20Bank%2C%20Sholinganallur%2C%20Chennai%2C%20Tamil%20Nadu%20-%20600119"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white dark:bg-black text-secondary dark:text-white px-8 py-4 rounded-full font-bold shadow-2xl flex items-center gap-2 pointer-events-auto hover:scale-105 transition-transform"

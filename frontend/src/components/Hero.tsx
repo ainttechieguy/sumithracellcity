@@ -109,7 +109,7 @@ export default function Hero() {
             </motion.a>
 
             <motion.a
-              href="https://wa.me/919962333311"
+              href="https://wa.me/919962333311?text=Hi%20Sumithra%20Cell%20City,%20I%20would%20like%20to%20enquire%20about%20a%20mobile%20repair%20service."
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.02 }}
