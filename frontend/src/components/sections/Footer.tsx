@@ -51,12 +51,12 @@ export default function Footer() {
           <div>
             <h4 className="text-gray-900 font-bold mb-6">Services</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link to="/services" className="hover:text-primary transition-colors">Screen Repair</Link></li>
-              <li><Link to="/services" className="hover:text-primary transition-colors">Battery Replacement</Link></li>
-              <li><Link to="/services" className="hover:text-primary transition-colors">Motherboard Repair</Link></li>
-              <li><Link to="/services" className="hover:text-primary transition-colors">Apple Product Service</Link></li>
-              <li><Link to="/services" className="hover:text-primary transition-colors">Software Support</Link></li>
-              <li><Link to="/services" className="hover:text-primary transition-colors">Accessories</Link></li>
+              <li><Link to="/iphone-screen-replacement-sholinganallur" onClick={() => window.scrollTo(0, 0)} className="hover:text-primary transition-colors">iPhone Screen Replacement</Link></li>
+              <li><Link to="/iphone-battery-replacement-sholinganallur" onClick={() => window.scrollTo(0, 0)} className="hover:text-primary transition-colors">iPhone Battery Service</Link></li>
+              <li><Link to="/mobile-repair-sholinganallur" onClick={() => window.scrollTo(0, 0)} className="hover:text-primary transition-colors">Mobile Repair Sholinganallur</Link></li>
+              <li><Link to="/apple-device-service-omr" onClick={() => window.scrollTo(0, 0)} className="hover:text-primary transition-colors">Apple Device Service OMR</Link></li>
+              <li><Link to="/services" onClick={() => window.scrollTo(0, 0)} className="hover:text-primary transition-colors">All Services</Link></li>
+              <li><Link to="/brands" onClick={() => window.scrollTo(0, 0)} className="hover:text-primary transition-colors">Supported Brands</Link></li>
             </ul>
           </div>
 

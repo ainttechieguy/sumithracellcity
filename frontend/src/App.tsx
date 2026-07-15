@@ -10,6 +10,10 @@ import ProcessPage from './pages/ProcessPage';
 import GalleryPage from './pages/GalleryPage';
 import Admin from './pages/Admin';
 import NotFound from './pages/NotFound';
+import IphoneScreenReplacement from './pages/seo/IphoneScreenReplacement';
+import IphoneBatteryReplacement from './pages/seo/IphoneBatteryReplacement';
+import MobileRepairSholinganallur from './pages/seo/MobileRepairSholinganallur';
+import AppleDeviceServiceOmr from './pages/seo/AppleDeviceServiceOmr';
 
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
@@ -45,6 +49,10 @@ function App() {
           <Route path="/process" element={<ProcessPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/iphone-screen-replacement-sholinganallur" element={<IphoneScreenReplacement />} />
+          <Route path="/iphone-battery-replacement-sholinganallur" element={<IphoneBatteryReplacement />} />
+          <Route path="/mobile-repair-sholinganallur" element={<MobileRepairSholinganallur />} />
+          <Route path="/apple-device-service-omr" element={<AppleDeviceServiceOmr />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

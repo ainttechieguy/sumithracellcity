@@ -11,9 +11,10 @@ interface SEOProps {
   description: string;
   path: string;
   faqData?: FAQItem[];
+  serviceSchema?: any;
 }
 
-export default function SEO({ title, description, path, faqData }: SEOProps) {
+export default function SEO({ title, description, path, faqData, serviceSchema }: SEOProps) {
   const domain = "https://sumithracellcity.com";
   // The path always starts with /, so if path is '/', url should be domain + '/' to match canonical rule
   const url = path === '/' ? `${domain}/` : `${domain}${path}`;
@@ -190,6 +191,13 @@ export default function SEO({ title, description, path, faqData }: SEOProps) {
       }))
     };
     schemaArray.push(faqSchema);
+  }
+
+  // =======================================================================
+  // CONDITIONAL ENTITIES (Service)
+  // =======================================================================
+  if (serviceSchema) {
+    schemaArray.push(serviceSchema);
   }
 
   return (

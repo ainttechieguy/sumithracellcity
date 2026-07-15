@@ -74,7 +74,14 @@ const urlBlocks = extractedRoutes.map(route => {
   if (route.path === '/') {
     priority = '1.0';
     changefreq = 'daily';
-  } else if (['/services', '/process'].includes(route.path)) {
+  } else if ([
+    '/services', 
+    '/process',
+    '/mobile-repair-sholinganallur',
+    '/apple-device-service-omr',
+    '/iphone-screen-replacement-sholinganallur',
+    '/iphone-battery-replacement-sholinganallur'
+  ].includes(route.path)) {
     priority = '0.9';
     changefreq = 'weekly';
   } else if (['/about', '/brands', '/contact'].includes(route.path)) {
