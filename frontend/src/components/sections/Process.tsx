@@ -30,14 +30,14 @@ export default function Process() {
     <section id="process" className="py-24 px-6 bg-gray-50 dark:bg-[#0a0a0a] overflow-hidden">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-20">
-          <motion.h2 
+          <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-bold mb-6 text-secondary dark:text-white"
           >
-            Simple and Transparent Repair Process
-          </motion.h2>
+            Our Mobile Repair Process
+          </motion.h1>
           <p className="text-gray-500 max-w-2xl mx-auto text-lg">
             From the moment you walk in to the moment you leave with a working device, we ensure transparency and quality at every step.
           </p>

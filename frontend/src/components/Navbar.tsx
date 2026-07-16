@@ -37,7 +37,7 @@ export default function Navbar() {
             src="/logo.png" 
             alt="Sumithra Cell City" 
             className={`w-auto object-contain transition-all duration-300 group-hover:scale-105 ${
-              isScrolled ? 'h-20 md:h-28' : 'h-20 md:h-32'
+              isScrolled ? 'h-14 md:h-20' : 'h-16 md:h-24'
             }`} 
           />
         </Link>

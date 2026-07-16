@@ -28,15 +28,15 @@ export default function Services() {
         >
           Our Expertise
         </motion.span>
-        <motion.h2 
+        <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.1 }}
           className="text-4xl md:text-5xl font-bold mb-6 text-secondary dark:text-white"
         >
-          Complete Smartphone Repair Services
-        </motion.h2>
+          Mobile Phone Repair Services in Sholinganallur
+        </motion.h1>
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

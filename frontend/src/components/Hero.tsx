@@ -44,7 +44,7 @@ export default function Hero() {
       ref={heroRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-[#0a0a0a] pt-20"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white dark:bg-[#0a0a0a] pt-32 lg:pt-40"
       style={{ perspective: 2000 }}
     >
       {/* Premium Background Additions: Gradients, Aurora, Noise */}
@@ -76,10 +76,10 @@ export default function Hero() {
             <span>4.9 Rating | 18+ Years Experience</span>
           </motion.div>
 
-          <h1 className="text-5xl lg:text-7xl font-bold tracking-tight mb-6 leading-tight text-secondary dark:text-white">
-            Chennai's Trusted <br />
+          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight mb-6 leading-tight text-secondary dark:text-white">
+            Professional Mobile Phone Repair & <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-500">
-              Smartphone Experts
+              Apple Product Service Centre in Sholinganallur, Chennai
             </span>
           </h1>
 
@@ -90,34 +90,37 @@ export default function Hero() {
           <div className="flex flex-wrap gap-4">
             <motion.a
               href="#booking"
+              aria-label="Book Mobile Phone Repair Service in Sholinganallur"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="px-8 py-4 bg-primary text-white rounded-full font-medium flex items-center gap-2 hover:bg-blue-700 transition-colors shadow-[0_0_40px_rgba(11,87,208,0.3)]"
             >
-              Book Service
-              <ArrowRight className="w-5 h-5" />
+              Book Mobile Repair Service
+              <ArrowRight className="w-5 h-5" aria-hidden="true" />
             </motion.a>
 
             <motion.a
               href="tel:+919962333311"
+              aria-label="Call Sumithra Cell City for Apple Device Repair"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="px-8 py-4 glass rounded-full font-medium flex items-center gap-2 hover:bg-gray-100 dark:hover:bg-white/10 transition-colors"
             >
-              <Phone className="w-5 h-5" />
-              Call Now
+              <Phone className="w-5 h-5" aria-hidden="true" />
+              Call For Apple Repair
             </motion.a>
 
             <motion.a
               href="https://wa.me/919962333311?text=Hi%20Sumithra%20Cell%20City,%20I%20would%20like%20to%20enquire%20about%20a%20mobile%20repair%20service."
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="WhatsApp Sumithra Cell City for Battery Replacement Service"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               className="px-8 py-4 rounded-full font-medium flex items-center gap-2 text-green-600 dark:text-accent hover:bg-green-50 dark:hover:bg-accent/10 transition-colors border border-green-200 dark:border-accent/20"
             >
-              <MessageCircle className="w-5 h-5" />
-              WhatsApp
+              <MessageCircle className="w-5 h-5" aria-hidden="true" />
+              WhatsApp Us
             </motion.a>
           </div>
 

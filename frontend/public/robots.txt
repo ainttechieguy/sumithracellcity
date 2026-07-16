@@ -1,20 +1,7 @@
-# https://sumithracellcity.com/robots.txt
-
 User-agent: *
 Allow: /
-# Protect internal routes
 Disallow: /admin
-
-# Explicitly allow Google crawler
-User-agent: Googlebot
-Allow: /
-
-# Explicitly allow Bing crawler
-User-agent: Bingbot
-Allow: /
-
-# Explicitly allow static assets (CSS, JS, Images, Fonts) just in case
-Allow: /assets/
-Allow: /images/
+Disallow: /login
+Disallow: /*404
 
 Sitemap: https://sumithracellcity.com/sitemap.xml

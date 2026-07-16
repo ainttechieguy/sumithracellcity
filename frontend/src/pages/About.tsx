@@ -7,6 +7,8 @@ import { motion } from 'motion/react';
 import { Award, Shield, ThumbsUp, Users, CheckCircle2 } from 'lucide-react';
 import { businessData } from '../data/business';
 import SEO from '../components/SEO';
+import Breadcrumbs from '../components/Breadcrumbs';
+import AboutSEOContent from '../components/sections/AboutSEOContent';
 
 const values = [
   { icon: <Shield />, title: "Honest Diagnosis", desc: "No hidden fees, no unnecessary repairs." },
@@ -38,13 +40,14 @@ export default function About() {
   return (
     <main className="bg-white dark:bg-[#0a0a0a] text-secondary dark:text-white min-h-screen selection:bg-primary/30 selection:text-primary pt-24">
       <SEO 
-        title="About Sumithra Cell City | Trusted Mobile Repair in Chennai"
-        description="Learn about Sumithra Cell City, serving Chennai's IT corridor since 2005. Expert phone repair and Apple service specialists."
+        title="About Sumithra Cell City | Mobile Repair Since 2005"
+        description="Learn about Sumithra Cell City, serving Chennai's IT corridor since 2005. Expert phone repair and Apple service specialists in Sholinganallur."
         path="/about"
       />
       <Navbar />
+      <Breadcrumbs />
 
-      <section className="py-20 px-6 max-w-7xl mx-auto">
+      <section className="py-10 px-6 max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
@@ -52,7 +55,7 @@ export default function About() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl lg:text-6xl font-bold mb-6 text-secondary dark:text-white">
-              Serving Chennai <br />Since <span className="text-primary dark:text-cyan-500">{businessData.founded}</span>
+              About Sumithra Cell City
             </h1>
             <p className="text-lg text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
               Sumithra Cell City has served customers in Sholinganallur and the surrounding Chennai IT corridor for nearly two decades.
@@ -141,6 +144,7 @@ export default function About() {
 
       </section>
 
+      <AboutSEOContent />
       <Footer />
       <FloatingActions />
     </main>

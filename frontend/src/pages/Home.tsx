@@ -9,6 +9,7 @@ import Contact from '../components/sections/Contact';
 import Footer from '../components/sections/Footer';
 import FloatingActions from '../components/sections/FloatingActions';
 import SEO from '../components/SEO';
+import HomeSEOContent from '../components/sections/HomeSEOContent';
 
 export default function Home() {
   useEffect(() => {
@@ -42,6 +43,7 @@ export default function Home() {
       <Booking />
       <Faq />
       <Contact />
+      <HomeSEOContent />
       <Footer />
       <FloatingActions />
     </main>
